@@ -55,7 +55,7 @@ module ym2149
 	input        SEL,
 	input        MODE,
 	
-	output [5:0] ACTIVE,
+	output [5:0] ACTIVE_CHANNELS,
 
 	input  [7:0] IOA_in,
 	output [7:0] IOA_out,
@@ -64,7 +64,7 @@ module ym2149
 	output [7:0] IOB_out
 );
 
-assign ACTIVE  = ~ymreg[7][5:0];
+assign ACTIVE_CHANNELS = ~ymreg[7][5:0];
 assign IOA_out = ymreg[14];
 assign IOB_out = ymreg[15];
 
